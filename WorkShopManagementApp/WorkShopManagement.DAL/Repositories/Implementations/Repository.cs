@@ -52,4 +52,20 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : BaseEnti
     {
         await _context.SaveChangesAsync();
     }
+
+    public async Task<bool> IsExist(int id)
+    {
+        var isExist = await Table.AnyAsync(x => x.Id == id);
+        return isExist;
+    }
+
+    public void SoftDelete(TEntity entity)
+    {
+        entity.IsDeleted = true;
+    }
+
+    public void Restore(TEntity entity)
+    {
+        entity.IsDeleted = false;
+    }
 }

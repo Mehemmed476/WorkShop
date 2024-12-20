@@ -12,8 +12,8 @@ using WorkShopManagement.DAL.Contexts;
 namespace WorkShopManagement.DAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241219141459_AddTables")]
-    partial class AddTables
+    [Migration("20241220135532_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,7 +37,6 @@ namespace WorkShopManagement.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("DeletedAt")
@@ -89,7 +88,6 @@ namespace WorkShopManagement.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Date")

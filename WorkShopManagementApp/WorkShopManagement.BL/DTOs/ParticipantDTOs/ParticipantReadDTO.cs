@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace WorkShopManagement.BL.DTOs.ParticipantDTOs;
 
-public class ParticipantReadDTO
+public record ParticipantReadDTO
 {
+    public bool IsDeleted { get; set; }
     public string Name { get; set; }
     public string Email { get; set; }
     public string Phone { get; set; }

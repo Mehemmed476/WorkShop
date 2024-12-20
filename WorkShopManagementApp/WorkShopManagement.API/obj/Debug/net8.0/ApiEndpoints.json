@@ -1,0 +1,95 @@
+[
+  {
+    "ContainingType": "WorkShopManagement.API.Controllers.ParticipantsController",
+    "Method": "Create",
+    "RelativePath": "api/Participants/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "participantCreateDTO",
+        "Type": "WorkShopManagement.BL.DTOs.ParticipantDTOs.ParticipantCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WorkShopManagement.BL.DTOs.ParticipantDTOs.ParticipantReadDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WorkShopManagement.API.Controllers.ParticipantsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Participants/GetAllParticipants",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.ICollection\u00601[[WorkShopManagement.BL.DTOs.ParticipantDTOs.ParticipantReadDTO, WorkShopManagement.BL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WorkShopManagement.API.Controllers.ParticipantsController",
+    "Method": "GetById",
+    "RelativePath": "api/Participants/GetById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WorkShopManagement.BL.DTOs.ParticipantDTOs.ParticipantReadDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WorkShopManagement.API.Controllers.ParticipantsController",
+    "Method": "Update",
+    "RelativePath": "api/Participants/Update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "participantUpdateDTO",
+        "Type": "ParticipantUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

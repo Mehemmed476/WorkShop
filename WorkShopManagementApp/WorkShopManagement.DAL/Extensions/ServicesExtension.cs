@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using WorkShopManagement.DAL.Contexts;
 using WorkShopManagement.DAL.Helpers;
+using WorkShopManagement.DAL.Repositories.Abstractions;
+using WorkShopManagement.DAL.Repositories.Implementations;
 
 namespace WorkShopManagement.DAL.Extensions;
 
@@ -20,5 +22,8 @@ public static class ServicesExtension
                 opt.UseSqlServer(ConnectionStr.GetConnectionString());
             }
         );
+
+        services.AddScoped<IParticipantRepository, ParticipantRepository>();
+        services.AddScoped<IWorkShopRepository, WorkShopRepository>();
     }
 }

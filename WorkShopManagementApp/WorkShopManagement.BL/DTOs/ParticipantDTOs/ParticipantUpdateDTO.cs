@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class ParticipantUpdateDTO
+public record ParticipantUpdateDTO
 {
     public string Name { get; set; }
     public string Email { get; set; }

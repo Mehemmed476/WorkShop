@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WorkShopManagement.BL.DTOs.WorkShopDTOs;
 
-public class WorkShopUpdateDTO
+public record WorkShopUpdateDTO
 {
     public string Title { get; set; }
     public string Description { get; set; }

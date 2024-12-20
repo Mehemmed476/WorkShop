@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WorkShopManagement.BL.DTOs.ParticipantDTOs;
 
-public class ParticipantCreateDTO
+public record ParticipantCreateDTO
 {
     public string Name { get; set; }
     public string Email { get; set; }

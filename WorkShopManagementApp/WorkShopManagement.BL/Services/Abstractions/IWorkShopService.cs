@@ -8,5 +8,6 @@ namespace WorkShopManagement.BL.Services.Abstractions
 {
     public interface IWorkShopService
     {
+
     }
 }
